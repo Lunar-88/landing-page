@@ -42,13 +42,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">Exness</div>
+    <div class="logo">YourLogo</div>
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
     <ul class="nav-links">
-        <li><a href="https://www.exness.ke/about-us/">About Us</a></li>
-        <li><a href="https://www.exness.ke/blog/">Blog</a></li>
-      <li class="register-button"><a href="https://one.exnesstrack.org/a/1sh0vxrgqd">Register</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="register-button">Register</a></li>
     </ul>
   </nav>
+  
 
   <header class="hero">
     <a href="https://one.exnesstrack.org/intl/en/a/1sh0vxrgqd">
@@ -93,5 +97,16 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       
       
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+  
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    });
+  </script>
+  
 </body>
 </html>
